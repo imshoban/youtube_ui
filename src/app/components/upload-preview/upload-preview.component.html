@@ -1,0 +1,21 @@
+<div class="loading-screen" *ngIf="loading">
+    <mat-spinner class="mat"></mat-spinner>
+</div>
+<div class="video-info-container">
+    <h4 style="margin-left: 1rem;">Video Information</h4>
+    <form [formGroup]="videoDataForm" (ngSubmit)="updateVideoData()">
+        <div class="info-container">
+            <span *ngIf="thumbnailImg">Please upload thumbnail image</span>
+            <input type="text" name="title-text" id="" placeholder="Title"  formControlName="title">
+            <div><span *ngIf="videoDataForm.get('title')?.errors?.required && videoDataForm.get('title')?.touched">  Title is required </span></div>
+            <textarea name="description-text" id="" cols="30" rows="10" placeholder="Description" style="text-indent: 6px;"  formControlName="description"></textarea>
+            <span *ngIf="videoDataForm.get('description')?.errors?.required && videoDataForm.get('description')?.touched">  Description is required </span>
+            <input type="text" name="tags" id="" placeholder="Tags"  formControlName="tags"> 
+            <span *ngIf="videoDataForm.get('tags')?.errors?.required && videoDataForm.get('tags')?.touched">  Tag is required </span>
+            <label for="upload" class="file-upload-btn">Select Thumbnail</label>
+                <input type="file" accept="image/*" id="upload" class="file-upload-input" (change)="onFileSelectedTemp($event)">
+            <img class="uploaded-img" #preview >
+            <button type="submit" class="publish-btn" >Publish</button>
+        </div>
+    </form>
+</div>

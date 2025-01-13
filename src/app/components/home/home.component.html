@@ -1,0 +1,20 @@
+<div class="loading-screen" *ngIf="loading">
+    <mat-spinner class="mat"></mat-spinner>
+</div>
+
+<!-- Video container -->
+<div class="main-content" >
+    <ng-container *ngFor="let video of videoList">
+        <div class="thumbnails"  [routerLink]="['/videoplayer']"  [queryParams]="{videoId: video.id}" >
+            <div style="flex: 1;"><img class="thumbnails-img" [src]="video.thumbnail_url"></div>
+            <div class="content">
+                <img class="profile-picture" [src]="video.picture_url">
+                <div class="content-details">
+                    <p class="content-title">{{video.title}}</p>
+                    <p class="content-creator">{{video.userName}}</p>
+                    <p class="content-report">{{video.videoCount}} Views · 6 months ago</p>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>

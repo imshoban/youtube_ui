@@ -1,0 +1,22 @@
+<div class="header">
+    <div class="header-col-1">
+      <img src="assets/icons/hamburger-menu.svg" class="hamburger">
+      <a routeLink="/home">
+        <img src="assets/icons/youtube-logo.svg" class="youtube-icon" (click)="navigatetoHome()">
+      </a>
+    </div>
+    <div class="header-col-2">
+      <input type="search" placeholder="Search" class="search-input">
+      <button class="search-button"><img matTooltip="Search" class = "search-icon" src="assets/icons/search.svg" ></button>
+      <button class="voice-button"><img matTooltip="Voice Search" class = "voice-icon" src="assets/icons/voice-search-icon.svg" ></button>
+    </div>
+    <div class="header-col-3">
+        <a routerLink="/upload-video"><img matTooltip="Upload Video" class = "upload-icon" src="assets/icons/upload.svg" ></a>
+        <img matTooltip="Notifications" class = "notification-icon" src="assets/icons/notifications.svg" >
+        <img mat-button [matMenuTriggerFor]="menu" class = "mychannel-icon" [src]="this.picture_url" >
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item >Profile</button>
+          <button mat-menu-item (click)="logout()">Logout</button>
+        </mat-menu>
+    </div>
+</div>

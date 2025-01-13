@@ -1,0 +1,59 @@
+
+*{
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.video-player{
+    margin-left: 6rem;
+    margin-top: 5rem;
+    object-fit: fill;
+    width: 70%;
+}
+.another-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.img-content{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.img-content img{
+    width: 60px;
+    border-radius: 20%;
+}
+.loading-screen{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: white;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.like-dislike{
+    border: 1px solid gray;
+    display:  flex;
+}
+.like,.dislike{
+    display: flex;
+    padding:0  0.5rem;
+    cursor: pointer;
+    align-items: center;
+}
+
+.video-content{
+    width: 30%;
+    margin-left: 5rem;
+    margin-top: 6rem;
+
+}
+.video-player-container{
+    display: flex;
+    max-width: 90vw;
+}
+
+
+

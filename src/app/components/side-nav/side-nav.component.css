@@ -1,0 +1,26 @@
+*{
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.side-nav{
+    border-right: 0.5px solid gray;
+    top: 60px;
+    width: 72px;
+    position:fixed;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.nav-list>p{
+    font-size: 0.7em;
+   
+}
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+

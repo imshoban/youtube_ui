@@ -1,0 +1,35 @@
+<div class="loading-screen" *ngIf="loading">
+    <mat-spinner class="mat"></mat-spinner>
+</div>
+<div class="container">
+    <div class="logo-container">
+        <img src="assets/logo.webp" alt="" width="30%">
+        <h1>Sign in </h1>
+        <h4>to continue to YouTube</h4>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()" >
+        <span *ngIf="registerError">Username or Password is incorrect</span>
+        <span *ngIf="authError">Account Not Registered. Please Sign Up</span>
+        <div class="inner-element">
+            <label for="email"></label>
+            <input type="email" formControlName="email" id="email" name="email" placeholder="Email"><br>
+        </div>
+        <div>
+            <span *ngIf="loginForm.get('email')?.errors?.required && loginForm.get('email')?.touched"> Email is required </span>
+            <span *ngIf="loginForm.get('email')?.errors?.email && loginForm.get('email')?.touched"> Please enter a valid email </span>
+        </div>
+        <div class="form-group">
+            <label for="password"></label>
+            <input type="password" formControlName="password" id="password" name="password" placeholder="Password">
+            <span *ngIf="loginForm.get('password')?.errors?.required && loginForm.get('password')?.touched">Password is required</span>
+        </div>
+        <div style="margin-top: 1rem;"><a href="#">Forgot password?</a></div>
+        <div class="bottom-container">
+            <a routerLink="/signup">Create Account</a>
+            <button type="submit" class="login-button">Sign in</button>
+        
+        </div>
+    </form> 
+    
+  </div>
+  

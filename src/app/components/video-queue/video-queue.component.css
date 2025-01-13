@@ -1,0 +1,50 @@
+*{
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.thumbnails-img{
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.5s;
+    width: 6rem;
+
+} 
+.thumbnails-img:hover{
+    cursor: pointer;
+    border-radius: 0px;
+    
+
+}
+.thumbnails{
+    display: flex;
+    cursor: pointer;
+    margin: 0px 0px 20px 20px;
+
+}
+.content-video{
+    display: flex;
+    align-items: top;
+    gap: 1rem;
+    margin-left: 1rem;
+    
+}
+.profile-picture{
+    height: 40px;
+    width: 40px;
+    margin-top: 20px ;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+.content-title{
+    font-weight: bold;
+}
+.content-creator{
+    font-size: 0.8em;
+    margin-bottom: 4px;
+    color : #606060;
+
+}
+.content-report{
+    font-size: 0.8em;
+    margin-top: 0px;
+    color : #606060;
+}
